@@ -1,0 +1,56 @@
+{
+  "uniqueSerialNumber": {
+    "fr": "Le numéro de série doit être unique",
+    "en": "Serial number must be unique"
+  },
+  "inspectionDateGreater": {
+    "fr": "La date d'inspection doit être supérieur à maintenant",
+    "en": "Material inspection date must be greater than now"
+  },
+  "materialAddSuccess": {
+    "fr": "Le materiel à été ajouté avec succès",
+    "en": "Material added successfully"
+  },
+  "imageMaterialNotFound": {
+    "fr": "Impossible d'ajouter l'image, le materiel n'a pas été trouvé",
+    "en": "Can't add image, material not found"
+  },
+  "imageBadExtension": {
+    "fr": "Impossible d'ajouter l'image, mauvaise extension (Veuillez utiliser .jpg ou .png)",
+    "en": "Can't add image, bad extension (use png or jpg files)"
+  },
+  "imageTooBig": {
+    "fr": "Impossible d'ajouter l'image, trop lourd. Le maximum est de ",
+    "en": "Can't add image, image max size is "
+  },
+  "materialEditSuccess": {
+    "fr": "Le materiel à été édité avec succès",
+    "en": "Material edited successfully"
+  },
+  "materialNotFound": {
+    "fr": "Materiel introuvable",
+    "en": "Material not found"
+  },
+  "materialDeleteSuccess": {
+    "fr": "Le materiel à été supprimmé avec succès",
+    "en": "Material deleted successfully"
+  },
+  "languageNotExist": {
+    "fr": "Language introuvable",
+    "en": "Language not found"
+  },
+
+  "filterPh": {
+    "fr": "Filtre (entrez un nom ou un numéro de série)",
+    "en": "Filter (name or serial number)"
+  },
+  "materialNamePh": {
+    "fr": "Nom du materiel",
+    "en": "Material name"
+  },
+  "materialSerialNumberPh": {
+    "fr": "Numéro de série du materiel",
+    "en":  "Material serial number"
+  }
+
+}

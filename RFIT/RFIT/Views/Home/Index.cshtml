@@ -1,0 +1,101 @@
+﻿@model Material
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script type="text/javascript">
+        lang = "@ViewBag.lang";
+    </script>
+</head>
+<body>
+    <div class="backgroundColor">
+        <div id="filterContainer" class="contentCenter">
+            <div class="mainStyle filterStyle">
+                <input type="text" class="basicInput filterInput" onkeyup="useFilter(this.value)" placeholder="@ViewBag.translate.filterPh[ViewBag.lang]" />
+                <div class="flagStyle">
+                    <img class="flag" src="~/images/flag_en.png" onclick="setLanguage('en');" />
+                    <img class="flag" src="~/images/flag_fr.png" onclick="setLanguage('fr');"/>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div id="addContainer" class="contentCenter">
+            <div class="mainStyle materialStyle">
+                <div class="materialSubContainer">
+                    <img id="material_image_add" class="materialImage" src="/images/default_image.png" onclick="document.getElementById('material_imageInput_add').click();">
+                    <form method="post" enctype="multipart/form-data" style="display: none;"><input type="file" id="material_imageInput_add" size="1" /></form>
+
+                    <div class="materialContent">
+                        <div><input type="text" id="material_name_add" class="basicInput" placeholder="@ViewBag.translate.materialNamePh[ViewBag.lang]" /></div>
+                        <div><input type="number" id="material_serialNumber_add" class="basicInput" placeholder="@ViewBag.translate.materialSerialNumberPh[ViewBag.lang]" /></div>
+
+                        <div class="basicInput">
+                            <input type="date" id="material_date_add" class="timeInput" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                            <input type="time" id="material_time_add" class="timeInput" value="@DateTime.Now.ToString("HH:mm")" />
+                        </div>
+                    </div>
+                    <div class="materialButton">
+                        <span class="icon nice-green fas fa-plus-circle" onclick="tryAddMaterial();"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </br>
+        <div id="materialListContainer">
+            @{
+                foreach (var material in ViewBag.Materials)
+                {
+                    <div class="contentCenter">
+                        <div id="@material.Id" class="material mainStyle materialStyle">
+                            <div class="materialSubContainer">
+                                <img id="material_image_@material.Id" class="materialImage" src="@material.ImagePath" onclick="document.getElementById('material_imageInput_@material.Id').click();">
+                                <form method="post" enctype="multipart/form-data" style="display: none;"><input type="file" id="material_imageInput_@material.Id" size="1" onchange="materialWasEdited(@material.Id);" /></form>
+
+                                <div class="materialContent">
+                                    <div><input type="text" id="material_name_@material.Id" class="basicInput" value="@material.Name" placeholder="@ViewBag.translate.materialNamePh[ViewBag.lang]" onkeyup="materialWasEdited(@material.Id);" onchange="materialWasEdited(@material.Id);" /></div>
+                                    <div><input type="number" id="material_serialNumber_@material.Id" class="basicInput" value="@material.SerialNumber" placeholder="@ViewBag.translate.materialSerialNumberPh[ViewBag.lang]" onkeyup="materialWasEdited(@material.Id);" onchange="materialWasEdited(@material.Id);" /></div>
+
+                                    <div class="basicInput">
+                                        <input type="date" id="material_date_@material.Id" class="timeInput" value="@ViewBag.TimestampToDate(@material.InspectionDate).ToString("yyyy-MM-dd")" onkeyup="materialWasEdited(@material.Id);" onchange="materialWasEdited(@material.Id);" />
+                                        <input type="time" id="material_time_@material.Id" class="timeInput" value="@ViewBag.TimestampToDate(@material.InspectionDate).ToString("HH:mm")" onkeyup="materialWasEdited(@material.Id);" onchange="materialWasEdited(@material.Id);" />
+                                    </div>
+                                </div>
+                                <div class="materialButton">
+                                    <span class="icon nice-green fas fa-check-circle" style="display: none;" id="material_saveBtn_@material.Id" onclick="tryEditMaterial(@material.Id);"></span>
+                                    <span class="icon nice-red fas fa-minus-circle" onclick="tryDeleteMaterial(@material.Id);"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="modal" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title">Modal title</h5>
+                        <button type="button" id="modal-button-close_1" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="modal-button-ok" class="btn btn-primary">Ok</button>
+                        <button type="button" id="modal-button-close_2" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

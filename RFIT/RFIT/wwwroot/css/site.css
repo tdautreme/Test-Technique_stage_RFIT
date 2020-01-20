@@ -1,0 +1,197 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-image: url("/images/body_background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.backgroundColor {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+#addContainer {
+    margin-top: 5%;
+}
+
+.contentCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.materialSubContainer {
+    display: flex;
+    justify-content: left;
+    height: 30vh;
+}
+
+.materialImage {
+    width: 30vh;
+    height: 100%;
+    cursor: pointer;
+}
+
+.mainStyle {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(25, 25, 25, 0.9);
+    color: #fff;
+    margin-bottom: 1%;
+    width: 50%;
+}
+
+.materialStyle {
+    text-align: left;
+}
+
+#filterContainer {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.filterStyle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+    width: 100%;
+    text-align: center;
+    background-color: #282a2f;
+}
+
+.flagStyle {
+    width: 13%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flag {
+    cursor: pointer;
+    width: 40%;
+}
+
+.basicInput {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+.filterInput {
+    text-align: center;
+    border: none;
+}
+
+.timeInput {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+}
+
+.materialContent {
+    margin-left: 2%;
+    width: 70%;
+}
+
+.materialButton {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.icon {
+    height: 33%;
+    width: 33% !important;
+    margin-top: 33%;
+    margin-bottom: 33%;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.icon *{
+    height: 100%;
+    width: 100%;
+}
+
+.nice-red {
+    color: #FF4136;
+}
+
+.nice-green {
+    color: #2ECC40;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+

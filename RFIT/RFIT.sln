@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFIT", "RFIT\RFIT.csproj", "{D41DAAF8-07BC-4EEE-8234-B1DE9297325F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D41DAAF8-07BC-4EEE-8234-B1DE9297325F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41DAAF8-07BC-4EEE-8234-B1DE9297325F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41DAAF8-07BC-4EEE-8234-B1DE9297325F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41DAAF8-07BC-4EEE-8234-B1DE9297325F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4239A030-DE2B-4E86-BC82-9B50CB815A1A}
+	EndGlobalSection
+EndGlobal
